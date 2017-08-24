@@ -8,8 +8,8 @@ var should_clear = "false";
 function add(first,second)
 {
   var result = 0.0;
-  first = parseInt(first);
-  second = parseInt(second);
+  first = parseFloat(first);
+  second = parseFloat(second);
   result = first + second;
   return result;
 }
@@ -17,15 +17,15 @@ function add(first,second)
 function multiply(first,second)
 {
   var result = 0.0;
-  first = parseInt(first);
-  second = parseInt(second);
+  first = parseFloat(first);
+  second = parseFloat(second);
   result = first * second;
   return result;
 }
 
 function divide(first,second)
 {
-  if(parseInt(second)===0)
+  if(parseFloat(second)===0)
   {
     alert("Impossible de diviser par 0 !")
     return null;
@@ -33,8 +33,8 @@ function divide(first,second)
   else
   {
     var result = 1.0;
-    first = parseInt(first);
-    second = parseInt(second);
+    first = parseFloat(first);
+    second = parseFloat(second);
     result = first / second;
     return result;  
   }
@@ -43,8 +43,8 @@ function divide(first,second)
 function substract(first,second)
 {
   var result = 0;
-  first = parseInt(first);
-  second = parseInt(second);
+  first = parseFloat(first);
+  second = parseFloat(second);
   result = first - second;
   return result;
 }
@@ -96,8 +96,21 @@ function equal()
   first_number_string="";
 }
 
+function shadow_effect(button)
+{
+  //Intro to have the shadow effect
+  button.addClass('shadow');
+  // var current_button = $(this);
+  setTimeout(function(){
+    button.removeClass('shadow');
+    }, 100);
+}
+
 $('.number').on('click',function()
 {
+  var current_button = $(this);
+  shadow_effect(current_button);
+  
   if(should_clear)
   {
     clear();
@@ -111,11 +124,16 @@ $('.number').on('click',function()
 
 $('.clear').on('click',function()
 {
+  var current_button = $(this);
+  shadow_effect(current_button);
  clearAll();
 })
 
 $('.operator').on('click',function()
 {
+  var current_button = $(this);
+  shadow_effect(current_button);
+
   if(first_number_string === "")
   {
     first_number_string = current_number_string;
@@ -136,5 +154,7 @@ $('.operator').on('click',function()
 
 $('.equal').on('click',function()
 {
+  var current_button = $(this);
+  shadow_effect(current_button);
  equal(); 
 })

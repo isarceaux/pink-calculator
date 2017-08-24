@@ -137,17 +137,21 @@ $('.operator').on('click',function()
   if(first_number_string === "")
   {
     first_number_string = current_number_string;
+    second_number_string = current_number_string;
     current_operator = this.innerHTML;
     clear();  
   }
   else
   {
-    second_number_string = current_number_string;
-    var temporary_number = current_number_string;
-    should_clear = true;
+    if(current_number_string!="")
+    {
+      second_number_string = current_number_string;    
+    }
+    // var temporary_number = current_number_string;
     operate();
-    // clear(); 
-    first_number_string = temporary_number;
+    current_operator = this.innerHTML;
+    should_clear = true;
+    first_number_string = current_number_string;
   }
   
 })

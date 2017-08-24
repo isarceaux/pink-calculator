@@ -1,13 +1,33 @@
+html,body {
+  /*height:100%;*/
+  margin:0;
+  padding: 0;
+}
+
 body {
   padding-top: 10px;
+  /*height:100%;*/
   font-size: 1.7em;
   font-family: 'tahoma', 'verdana';
 }
+
 [class*="col-"], footer {
   background-color: lightgreen;
   border: 1px solid white;
   border-radius: 6px;
-  line-height: 40px;
+  /*line-height: 50%;*/
+  /*height: 100%;*/
+  text-align: center;
+}
+
+.hcent
+  {
+    height:100%;
+  }
+
+h1
+{
+  width:100%;
   text-align: center;
 }
 
@@ -18,6 +38,7 @@ body {
   text-align: left;
   border-radius: 0px;
   height: 43px;
+  font-family: 'Courier New';
 }
 
 .background
@@ -54,6 +75,7 @@ body {
 .row
 {
   padding: 5px;
+  height: auto;
 }
 
 .shadow
@@ -64,4 +86,18 @@ body {
 .clear
 {
   cursor: pointer;
+}
+
+@media all and (max-width: 1280px) and (orientation:portrait)
+{
+  body
+  {
+    font-size: 12em;
+  }
+
+  .result
+  {
+    height: 150px;
+  }
+  
 }

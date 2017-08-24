@@ -1,0 +1,54 @@
+body {
+  padding-top: 10px;
+  font-size: 1.7em;
+  font-family: 'tahoma', 'verdana';
+}
+[class*="col-"], footer {
+  background-color: lightgreen;
+  border: 1px solid white;
+  border-radius: 6px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.result
+{
+  background-color: rgb(192,203,255);
+  color:black;
+  text-align: left;
+  border-radius: 0px;
+  height: 43px;
+}
+
+.background
+{
+  background-color: pink;
+  padding: 20px;
+}
+
+.number
+{
+  background-color: rgb(255,116,140);
+  font-weight:bold;
+  /*margin:1px;*/
+}
+
+.operator
+{
+  background-color: rgb(255,218,224);
+}
+
+.number-bis
+{
+  background-color: rgb(255,167,182);
+}
+
+.equal
+{
+  background-color: rgb(203,255,182);
+}
+
+.row
+{
+  padding: 5px;
+}

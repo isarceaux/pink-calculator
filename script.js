@@ -156,5 +156,6 @@ $('.equal').on('click',function()
 {
   var current_button = $(this);
   shadow_effect(current_button);
- equal(); 
+  equal(); 
+  should_clear = true;
 })
